@@ -1,0 +1,246 @@
+/* Configurações Globais e Variáveis */
+:root {
+    --blue-gov: #004587;
+    --blue-light: #1351b4;
+    --blue-dark: #003262;
+    --gray-bg: #f8f9fa;
+    --white: #ffffff;
+    --text-dark: #161b1e;
+    --text-muted: #555;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Cabeçalho */
+.gov-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gov-logo img { height: 35px; }
+
+.institutional-nav a {
+    color: var(--blue-light);
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.institutional-nav a:hover { text-decoration: underline; }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--blue-light);
+}
+
+.lang-select { font-weight: bold; cursor: pointer; font-size: 14px; }
+
+.accessibility-icons { display: flex; gap: 10px; cursor: pointer; border-left: 1px solid #ccc; padding-left: 15px; }
+
+.btn-login {
+    background: var(--blue-btn, #1351b4);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-login:hover { background: var(--blue-dark); }
+
+/* 2. Hero & Busca */
+.hero {
+    background: var(--gray-bg);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--blue-gov);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.search-container {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    outline: none;
+}
+
+.search-container button {
+    background: var(--blue-gov);
+    color: white;
+    border: none;
+    padding: 0 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 3. Atalhos Rápidos */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.quick-links a {
+    border: 1px solid var(--blue-gov);
+    color: var(--blue-gov);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.quick-links a:hover { background: var(--blue-gov); color: white; }
+
+/* 4. Categorias (Referência Imagem 1) */
+.category-section { padding: 60px 0; background-color: var(--white); }
+
+.title { text-align: center; color: var(--blue-dark); font-size: 2rem; margin-bottom: 10px; }
+.subtitle { text-align: center; color: var(--text-muted); margin-bottom: 40px; }
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #eee;
+    padding: 45px 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-color: var(--blue-gov);
+}
+
+.icon { font-size: 50px; margin-bottom: 20px; }
+
+.card h3 { 
+    color: var(--blue-gov); 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+    font-weight: 800;
+}
+
+/* 5. Galeria de Apps (Referência Imagem 2) */
+.apps-section {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.apps-title {
+    color: var(--blue-dark);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.apps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.app-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.btn-gallery {
+    display: inline-block;
+    border: 1.5px solid var(--blue-gov);
+    color: var(--blue-gov);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-gallery:hover { background: var(--blue-gov); color: white; }
+
+/* 6. Rodapé */
+.footer {
+    background: var(--blue-gov);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-links { margin-top: 15px; opacity: 0.8; font-size: 14px; }
+.footer-links a { color: white; text-decoration: none; margin: 0 10px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .institutional-nav { display: none; }
+    .hero h1 { font-size: 1.8rem; }
+    .search-container { flex-direction: column; }
+    .category-grid { grid-template-columns: 1fr 1fr; }
+    .app-card img { width: 150px; height: 150px; }
+}
