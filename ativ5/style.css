@@ -1,17 +1,18 @@
-/* Variáveis de Cores - Ajustadas para tons mais alegres (KidsTech) */
+/* --- 1. VARIÁVEIS DE CORES (Tabela KidsTech) --- */
 :root {
-    --primary-red: #e63946;
-    --primary-blue: #457b9d;
-    --primary-green: #2a9d8f;
-    --primary-yellow: #e9c46a;
-    --blue-dark: #1d3557;
+    --kids-pink: #FF69B4;
+    --kids-yellow: #FFD700;
+    --kids-blue: #00BFFF;
+    --kids-purple: #9370DB;
+    --kids-green: #32CD32;
+    --kids-red: #e63946;
     --white: #ffffff;
-    --gray-bg: #f1faee;
+    --blue-dark: #1d3557;
     --text-dark: #161b1e;
-    --border-color: #e0e0e0;
+    --kids-bg-light: #fffbe6;
 }
 
-/* Configurações Globais */
+/* --- 2. CONFIGURAÇÕES GLOBAIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -21,14 +22,15 @@
 
 body {
     background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    background-attachment: fixed;
     color: var(--text-dark);
+    line-height: 1.6;
 }
 
-/* Header e Menu */
+/* --- 3. HEADER E MENU (Estilo Pílula Unificado) --- */
 .header {
     background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 3px solid var(--kids-yellow);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -40,111 +42,192 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: center; /* Centraliza o menu para facilitar o clique */
+    justify-content: center;
     align-items: center;
 }
 
-.header .menu a {
-    color: #000;
+.menu-div {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-div a {
     text-decoration: none;
-    font-size: 16px; /* Aumentado para melhor leitura */
-    margin: 0 10px;
-    padding: 8px 15px;
-    font-weight: 600;
-    transition: transform 0.2s ease;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 25px; /* Formato Pílula */
+    transition: transform 0.2s, filter 0.2s;
     display: inline-block;
 }
 
-.header .menu a:hover {
-    transform: translateY(-3px);
+.menu-div a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
 }
 
-/* Estilo dos Botões do Menu */
-.atividades-link { background-color: #4ade80; border-radius: 12px; }
-.historias-link { background-color: #f87171; border-radius: 12px; }
-.jogos-link { background-color: #60a5fa; border-radius: 12px; }
-.recursos-link { background-color: #facc15; border-radius: 12px; }
-.contato-link { background-color: #a78bfa; border-radius: 12px; }
+/* Cores dos Botões do Menu */
+.inicio-link { background-color: var(--kids-purple); }
+.atividades-link { background-color: var(--kids-green); }
+.historias-link { background-color: var(--kids-pink); }
+.jogos-link { background-color: var(--kids-blue); }
+.recursos-link { background-color: var(--kids-yellow); color: #555 !important; }
 
-
-/* Seção de Categorias */
-.section-categorias {
-    padding: 60px 0;
-}
-
+/* --- 4. CARDS DE CATEGORIA (Página Inicial) --- */
 .categorias_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.categoria {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-bottom: 8px solid rgba(0,0,0,0.1);
+}
+
+.categoria:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.categoria img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+/* --- 5. CONFIGURAÇÕES ESPECÍFICAS: ATIVIDADES --- */
+.grid-atividades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-atividade {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    border: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.card-atividade:hover {
+    transform: translateY(-10px);
+    border-color: var(--kids-blue);
+}
+
+.btn-opcao {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.2s;
+    background-color: #eee;
+}
+
+.btn-opcao:hover { transform: scale(1.1); }
+.btn-correto { background-color: var(--kids-green); color: white; }
+.btn-azul { background-color: var(--kids-blue); color: white; }
+.btn-rosa { background-color: var(--kids-pink); color: white; }
+
+/* --- 6. CONFIGURAÇÕES ESPECÍFICAS: HISTÓRIAS (ESTANTE) --- */
+.estante-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Cards das Categorias */
-.categoria {
-    transition: all 0.3s ease;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 20px; /* Bordas mais arredondadas para crianças */
+.capa-livro {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-bottom: 8px solid rgba(0,0,0,0.1);
 }
 
-.categoria:hover {
-    transform: scale(1.05); 
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); 
-    cursor: pointer; 
+.capa-livro:hover { transform: translateY(-15px); }
+
+.capa-livro img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
 }
 
-/* Cores dos Cards */
-.jogos { background-color: #bfdbfe; border: 4px solid #60a5fa; }
-.atividades { background-color: #bbf7d0; border: 4px solid #4ade80; }
-.historias { background-color: #fecaca; border: 4px solid #f87171; }
-.recursos { background-color: #fef08a; border: 4px solid #facc15; }
-
-.categoria img {
-    max-width: 60%;
-    height: auto;
-    border-radius: 15px;
-    margin: 15px 0;
+/* Modal de Leitura */
+.modal-leitura {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Botões dos Cards */
+.conteudo-livro {
+    background: var(--white);
+    width: 90%;
+    max-width: 650px;
+    border-radius: 40px;
+    padding: 40px;
+    position: relative;
+    border: 10px solid var(--kids-yellow);
+    text-align: center;
+}
+
+/* --- 7. BOTÕES E RODAPÉ --- */
 .btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 25px;
+    padding: 12px 30px;
     background-color: var(--blue-dark);
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    border-radius: 50px; /* Estilo pílula */
+    border-radius: 50px;
     font-weight: bold;
-    transition: filter 0.3s ease;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    filter: brightness(1.2);
-}
+.btn:hover { filter: brightness(1.2); transform: scale(1.05); }
 
-/* Rodapé */
 .footer {
     background-color: var(--blue-dark);
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 30px 0;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-/* Responsividade para Celulares */
+/* --- 8. RESPONSIVIDADE --- */
 @media screen and (max-width: 768px) {
-    .categorias_container {
+    .categorias_container, .grid-atividades, .estante-grid {
         grid-template-columns: 1fr;
     }
-    
-    .header .menu a {
-        font-size: 12px;
-        margin: 5px;
-        padding: 5px 10px;
-    }
+    .menu-div a { font-size: 12px; padding: 8px 12px; }
 }

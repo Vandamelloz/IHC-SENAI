@@ -1,29 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades</title>
+    <title>Mundo das Atividades - KidsTech</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
-    <main class="container">
-        <h1 style="text-align:center; color: var(--primary-green);">Mundo das Atividades</h1>
-        <div class="categorias_container">
-            <div class="categoria atividades">
-                <h3>🔢 Desafio de Matemática</h3>
-                <p>Quanto é 5 + 5? Clique no número certo!</p>
-                <button class="btn" onclick="alert('Parabéns! Você acertou!')">10</button>
-                <button class="btn" onclick="alert('Quase lá! Tente de novo.')">12</button>
-            </div>
-            <div class="categoria historias">
-                <h3>🦁 Curiosidade Animal</h3>
-                <p>Você sabia que o coração de um camarão fica na cabeça?</p>
-            </div>
-        </div>
-    </main>
-</body>
 
+    <header class="header">
+        <div class="container">
+            <nav class="menu-div">
+                <a class="inicio-link" href="index.html">🏠 Início</a>
+                <a class="atividades-link" href="atividades.html">✏️ Atividades</a>
+                <a class="historias-link" href="historias.html">📖 Histórias</a>
+                <a class="jogos-link" href="jogos.html">🎮 Jogos</a>
+                <a class="recursos-link" href="contato.html">👥 Pais</a>
+            </nav>
+        </div>
+    </header>
+
+    <div style="text-align: center; padding: 40px 20px;">
+        <h1 style="font-size: 3.5rem; color: var(--kids-green); text-shadow: 2px 2px white;">✏️ Mundo das Atividades</h1>
+        <p style="font-size: 1.2rem; font-weight: bold; color: #555;">Desafios rápidos para pequenos gênios!</p>
+    </div>
+
+    <main class="grid-atividades">
+        
+        <div class="card-atividade">
+            <h3>🔢 Conta Rápida</h3>
+            <p>Quanto é 7 + 3?</p>
+            <button class="btn-opcao" onclick="alert('Quase! Tente contar nos dedos.')">8</button>
+            <button class="btn-opcao btn-correto" onclick="alert('🌟 Nota 10! Você acertou!')">10</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>🍎 Maçãs e Amigos</h3>
+            <p>Se você tem 4 maçãs e ganha mais 2, com quantas fica?</p>
+            <button class="btn-opcao btn-azul" onclick="alert('🍎 Isso mesmo! Agora você tem 6!')">6</button>
+            <button class="btn-opcao" onclick="alert('Tente somar de novo!')">4</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>🎨 Mistura Mágica</h3>
+            <p>Que cor o Vermelho + Amarelo formam?</p>
+            <button class="btn-opcao btn-correto" style="background-color: orange; color: white;" onclick="alert('🎨 Mágica! Virou Laranja!')">Laranja</button>
+            <button class="btn-opcao" onclick="alert('Dica: É a cor da cenoura!')">Verde</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>🦒 Quem é maior?</h3>
+            <p>Qual animal é mais alto?</p>
+            <button class="btn-opcao" onclick="alert('O elefante é pesado, mas a girafa é mais alta!')">Elefante</button>
+            <button class="btn-opcao btn-correto" onclick="alert('🦒 Exato! Que pescoço gigante!')">Girafa</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>🐝 Rima Divertida</h3>
+            <p>O que rima com "Pão"?</p>
+            <button class="btn-opcao btn-rosa" onclick="alert('🌟 Boa! Pão rima com Avião!')">Avião</button>
+            <button class="btn-opcao" onclick="alert('Banana não combina com Pão...')">Banana</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>☀️ Dia ou Noite?</h3>
+            <p>Quando a Lua aparece no céu?</p>
+            <button class="btn-opcao" onclick="alert('De dia o Sol brilha forte!')">Dia</button>
+            <button class="btn-opcao btn-azul" onclick="alert('🌙 Isso! Hora de sonhar.')">Noite</button>
+        </div>
+
+        <div class="card-atividade desafio-fisico">
+            <h3>🏃 Desafio do Pulo</h3>
+            <p>Levante e dê 5 pulinhos agora mesmo!</p>
+            <button class="btn-opcao btn-rosa" onclick="alert('💥 Uau! Você tem muita energia!')">CONSEGUI!</button>
+        </div>
+
+        <div class="card-atividade desafio-logica">
+            <h3>🕵️ Detetive de Cores</h3>
+            <p>Encontre algo **AMARELO** aí perto de você!</p>
+            <button class="btn-opcao btn-azul" onclick="alert('🔍 Olhar de águia! Muito bem!')">ACHEI!</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>🧊 Estados da Água</h3>
+            <p>O gelo é água em que estado?</p>
+            <button class="btn-opcao btn-correto" onclick="alert('🧊 Correto! É o estado Sólido.')">Sólido</button>
+            <button class="btn-opcao" onclick="alert('Líquida é a água que bebemos!')">Líquido</button>
+        </div>
+
+        <div class="card-atividade">
+            <h3>🐚 Som do Mar</h3>
+            <p>Onde ouvimos o som das ondas?</p>
+            <button class="btn-opcao btn-azul" onclick="alert('🏖️ Que delícia de praia!')">Praia</button>
+            <button class="btn-opcao" onclick="alert('Na floresta ouvimos os pássaros!')">Floresta</button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 KidsTech - Aprender Brincando. Criado por Vanderléia Mello.</p>
+    </footer>
+
+</body>
 </html>
