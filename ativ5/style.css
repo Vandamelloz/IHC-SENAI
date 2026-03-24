@@ -1,119 +1,150 @@
+/* Variáveis de Cores - Ajustadas para tons mais alegres (KidsTech) */
 :root {
-    --blue-gov: #870000;
-    --blue-light: #7413b4;
-    --blue-dark: #003262;
-    --gray-bg: #47c90b;
-    --white: #a81a39;
+    --primary-red: #e63946;
+    --primary-blue: #457b9d;
+    --primary-green: #2a9d8f;
+    --primary-yellow: #e9c46a;
+    --blue-dark: #1d3557;
+    --white: #ffffff;
+    --gray-bg: #f1faee;
     --text-dark: #161b1e;
-    --text-muted: #555;
     --border-color: #e0e0e0;
 }
-body{
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-}
+
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
+
+body {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    color: var(--text-dark);
+}
+
+/* Header e Menu */
 .header {
-    border-bottom: 1px solid var(--border-color);
-    padding: 12px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 2px solid var(--border-color);
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 .header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza o menu para facilitar o clique */
     align-items: center;
 }
+
 .header .menu a {
-    color: black;
+    color: #000;
     text-decoration: none;
-    font-size: 14px;
-    margin-right: 20px;
-    font-weight: 500;
+    font-size: 16px; /* Aumentado para melhor leitura */
+    margin: 0 10px;
+    padding: 8px 15px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    display: inline-block;
 }
-.header .menu-div a:hover {
-    text-decoration: none;
+
+.header .menu a:hover {
+    transform: translateY(-3px);
 }
-.atividades-link{
-   background-color: rgb(45, 214, 45);
-    border-radius: 20%;
+
+/* Estilo dos Botões do Menu */
+.atividades-link { background-color: #4ade80; border-radius: 12px; }
+.historias-link { background-color: #f87171; border-radius: 12px; }
+.jogos-link { background-color: #60a5fa; border-radius: 12px; }
+.recursos-link { background-color: #facc15; border-radius: 12px; }
+.contato-link { background-color: #a78bfa; border-radius: 12px; }
+
+
+/* Seção de Categorias */
+.section-categorias {
+    padding: 60px 0;
 }
-.historias-link{
-    background-color: rgb(214, 45, 45);
-    border-radius: 20%;
+
+.categorias_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
-.jogos-link{
-    background-color: rgb(45, 45, 214);
-    border-radius: 20%;
-}
-.recursos-link{
-   background-color: rgb(218, 218, 120);
-   border-radius: 20%;
-}
-.section-categorias{ padding: 60px 0;; 
-}
-.categorias_container{
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-max-width: px;
-margin: 0 auto;
-padding: 20px;
-}
-.categoria{
+
+/* Cards das Categorias */
+.categoria {
     transition: all 0.3s ease;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px; /* Bordas mais arredondadas para crianças */
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .categoria:hover {
-    transform: scale(1.03); 
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); 
     cursor: pointer; 
 }
-.jogos{
-    background-color: rgb(45, 45, 214);
+
+/* Cores dos Cards */
+.jogos { background-color: #bfdbfe; border: 4px solid #60a5fa; }
+.atividades { background-color: #bbf7d0; border: 4px solid #4ade80; }
+.historias { background-color: #fecaca; border: 4px solid #f87171; }
+.recursos { background-color: #fef08a; border: 4px solid #facc15; }
+
+.categoria img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 15px;
+    margin: 15px 0;
 }
-.atividades{
-    background-color: rgb(45, 214, 45);
-}
-.historias{
-    background-color: rgb(214, 45, 45);
-}
-.recursos{
-    background-color: rgb(214, 214, 45);
-}
+
+/* Botões dos Cards */
 .btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 20px;
-    background-color: var(--blue-gov);
+    padding: 12px 25px;
+    background-color: var(--blue-dark);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px; /* Estilo pílula */
+    font-weight: bold;
+    transition: filter 0.3s ease;
 }
-.categoria img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 8px;
+
+.btn:hover {
+    filter: brightness(1.2);
 }
+
+/* Rodapé */
 .footer {
     background-color: var(--blue-dark);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     margin-top: 40px;
 }
+
+/* Responsividade para Celulares */
 @media screen and (max-width: 768px) {
     .categorias_container {
         grid-template-columns: 1fr;
     }
     
+    .header .menu a {
+        font-size: 12px;
+        margin: 5px;
+        padding: 5px 10px;
+    }
 }

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Estante Mágica - KidsTech</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      
+        :root {
+            --kids-pink: #FF69B4;
+            --kids-yellow: #FFD700;
+            --kids-blue: #00BFFF;
+            --kids-purple: #9370DB;
+            --kids-green: #32CD32;
+            --kids-bg: #fffbe6; 
+        }
+
+        body {
+            
+            background-color: var(--kids-bg);
+            background-image: radial-gradient(#FFD700 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #2c3e50;
+        }
+
+  
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+       
+        h1.titulo-pagina {
+            font-size: 4rem;
+            text-align: center;
+            color: var(--kids-pink);
+            text-shadow: 
+                3px 3px 0 var(--kids-yellow),
+                6px 6px 0 var(--kids-blue);
+            margin-bottom: 10px;
+        }
+
+        p.subtitulo {
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            color: var(--kids-purple);
+            margin-bottom: 50px;
+        }
+
+        .estante-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+      
+        .capa-livro {
+            background: white;
+            border-radius: 30px; 
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            
+       
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 5px solid rgba(0,0,0,0.05);
+            
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        
+        .capa-livro:hover {
+            transform: translateY(-15px) scale(1.03); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        .capa-livro:active {
+            transform: translateY(-3px); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+      
+        .tag-categoria {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+      
+        .capa-livro h2.placeholder-capa {
+            background-color: #eee;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            color: #aaa;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border: 3px dashed #ccc;
+        }
+
+      
+        .capa-livro h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+    
+        .capa-livro p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+       
+        .btn-ler {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--kids-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+        }
+
+        .btn-ler:hover {
+            background-color: #0099CC;
+        }
+
+     
+        .capa-livro.pink { border-top: 10px solid var(--kids-pink); background: #fff1f8; }
+        .capa-livro.blue { border-top: 10px solid var(--kids-blue); background: #f0faff; }
+        .capa-livro.red { border-top: 10px solid #e74c3c; background: #fff5f3; }
+        .capa-livro.green { border-top: 10px solid var(--kids-green); background: #f0fff4; }
+
+        .footer {
+            background-color: var(--kids-purple);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-top: 5px solid var(--kids-yellow);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container-nav">
+            <nav class="menu">
+                <div class="menu-div">
+                    <a class="inicio-link" href="index.html">🏠 Início</a>
+                    <a class="atividades-link" href="atividades.html">✏️ Atividades</a>
+                    <a class="historias-link" href="historias.html" style="color: var(--kids-pink); font-weight: bold;">📖 Histórias</a>
+                    <a class="jogos-link" href="jogos.html">🎮 Jogos</a>
+                    <a class="recursos-link" href="contato.html">👥 Pais</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <h1 class="titulo-pagina">✨ Estante Mágica</h1>
+        <p class="subtitulo">Qual aventura vamos viver hoje?</p>
+
+        <section class="estante-grid">
+            
+            <article class="capa-livro pink">
+                <span class="tag-categoria" style="background: var(--kids-blue);">🚀 Espaço</span>
+                <h2 class="placeholder-capa">Capa 1</h2>
+                <h3>Faísca e o Sorvete</h3>
+                <p>Uma aventura gelada no espaço!</p>
+                <a href="#" class="btn-ler">Ler Agora!</a>
+            </article>
+
+            <article class="capa-livro blue">
+                <span class="tag-categoria" style="background: var(--kids-green);">🦁 Animais</span>
+                <h2 class="placeholder-capa">Capa 2</h2>
+                <h3>O Leão Leonardo</h3>
+                <p>Como vencer o medo do escuro.</p>
+                <a href="#" class="btn-ler">Aventurar!</a>
+            </article>
+
+            <article class="capa-livro red">
+                <span class="tag-categoria" style="background: #e74c3c;">🚲 Aventura</span>
+                <h2 class="placeholder-capa">Capa 3</h2>
+                <h3>A Bike Voadora</h3>
+                <p>Voe alto com a imaginação!</p>
+                <a href="#" class="btn-ler">Voar!</a>
+            </article>
+
+            <article class="capa-livro green">
+                <span class="tag-categoria" style="background: var(--kids-purple);">✨ Magia</span>
+                <h2 class="placeholder-capa">Capa 4</h2>
+                <h3>O Jardim Secreto</h3>
+                <p>As flores têm muito a dizer!</p>
+                <a href="#" class="btn-ler">Descobrir!</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 KidsTech - Onde as histórias ganham vida! 🌟</p>
+    </footer>
+
+</body>
+</html>

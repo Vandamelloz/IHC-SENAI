@@ -1,0 +1,28 @@
+PARTE 1 – Protótipo de Baixa Fidelidade
+Criar o protótipo da página inicial de uma plataforma de cursos online.
+Foco: estrutura e organização, não estética.
+● A página deve conter:
+● Cabeçalho
+● Logo (retângulo com texto 'LOGO')
+● Menu com 4 itens
+● Banner principal (retângulo com texto)
+● 3 blocos de conteúdo lado a lado
+● Rodapé
+○ Regras:
+● Apenas HTML ou Figma
+● Sem cores elaboradas
+● Sem imagens reais
+● Utilizar apenas estrutura e organização
+PARTE 2 – Protótipo de Alta Fidelidade
+Transformar a mesma página em uma versão visual completa.
+Agora o foco é design, cores e acabamento visual.
+A nova versão deve conter:
+● Cores definidas
+● Botões estilizados
+● Imagem real no banner
+● Layout centralizado
+● Efeito hover (opcional)
+Regras:
+● Utilizar HTML + CSS ou Figma
+● Manter a mesma estrutura da versão anterior
+● Aplicar estilos visuais completos

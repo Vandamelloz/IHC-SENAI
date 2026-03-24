@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Interativos - Aprender Brincando</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <div class="menu-div">
+                    <a class="inicio-link" href="index.html">Início</a>
+                    <a class="atividades-link" href="atividades.html">Atividades Educativas</a>
+                    <a class="historias-link" href="historias.html">Histórias e Contos</a>
+                    <a class="jogos-link" href="jogos.html" style="border: 2px solid white;">Jogos Interativos</a>
+                    <a class="recursos-link" href="contato.html">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="text-align:center; margin-top: 30px; color: var(--blue-dark); font-size: 3rem;">🎮 Sala de Jogos!
+        </h1>
+        <p style="text-align:center; margin-bottom: 40px; font-weight: bold;">Escolha um desafio e mostre que você é
+            fera!</p>
+
+        <section class="section-categorias">
+            <div class="categorias_container">
+
+                <div class="categoria jogos">
+                    <h3>🚀 Foguete dos Números</h3>
+                    <img src="image/jogos.png" alt="Desafio Matemático">
+                    <p>Ajude o foguete a subir resolvendo as continhas rápidas!</p>
+                    <a href="#" class="btn" onclick="iniciarMatematica()">Jogar Agora</a>
+                </div>
+
+                <div class="categoria atividades">
+                    <h3>🔤 Caça-Palavras Animado</h3>
+                    <img src="image/atividades.png" alt="Jogo de Palavras">
+                    <p>Encontre o nome dos animais escondidos na floresta.</p>
+                    <a href="#" class="btn">Explorar</a>
+                </div>
+
+                <div class="categoria historias">
+                    <h3>🧠 Jogo da Memória</h3>
+                    <img src="image/historias.png" alt="Memória">
+                    <p>Encontre os pares dos personagens das nossas histórias!</p>
+                    <a href="#" class="btn">Brincar</a>
+                </div>
+
+                <div class="categoria recursos">
+                    <h3>❓ O que é, o que é?</h3>
+                    <img src="image/recursos.png" alt="Adivinhas">
+                    <p>Tente adivinhar as charadas mais engraçadas do mundo!</p>
+                    <a href="#" class="btn">Responder</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Aprender Brincando - Vanderléia Mello. Diversão garantida!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Pequeno spoiler de JS para animar a criança
+        function iniciarMatematica() {
+            let resposta = prompt("Desafio Rápido: Quanto é 4 + 3?");
+            if (resposta == "7") {
+                alert("🌟 EXCELENTE! Você é um mestre dos números!");
+            } else {
+                alert("😅 Quase lá! Tente contar nos dedinhos e tente de novo!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

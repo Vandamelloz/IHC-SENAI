@@ -1,0 +1,35 @@
+Atividade – Desenvolvimento de Site Infantil
+Contexto da Empresa
+A empresa fictícia KidsTech Soluções Digitais é especializada em desenvolver plataformas digitais voltadas para
+educação infantil.
+Recentemente, a empresa recebeu um contrato da organização Aprender Brincando, que deseja criar um site
+interativo para crianças de 6 a 9 anos com o objetivo de estimular o aprendizado de forma divertida.
+Sua equipe foi contratada para desenvolver o protótipo inicial do site.
+
+Requisitos do Cliente
+O site deve possuir:
+1. Página inicial
+Deve conter:
+ título do site
+ cores vibrantes
+ imagens ou ícones grandes
+ uma mensagem de boas-vindas
+
+2. Página de atividades
+Uma seção com atividades educativas, por exemplo:
+ jogo de adivinhar palavras
+ curiosidades sobre animais
+ mini quiz
+ desafios matemáticos simples
+
+3. Página de histórias
+Uma página com histórias curtas ou contos infantis.
+Pode incluir:
+ texto simples
+ imagens ilustrativas
+
+4. Página de contato
+Uma página simples contendo:
+ nome do projeto
+ equipe desenvolvedora
+ pequena descrição do site

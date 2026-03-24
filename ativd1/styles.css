@@ -7,12 +7,24 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --success-color: #166534;
-    --error-color: #991b1b;
-    --bg-color: #f8fafc;
-    --text-color: #1e293b;
-    --border-color: #94a3b8; 
+    --primary-yellow: #FFD700;
+    --primary-pink: #FF69B4;
+    --primary-blue: #00BFFF;
+    --primary-green: #32CD32;
+    --white: #ffffff;
+    --text-dark: #2c3e50;
+    --btn-hover: #ff4757;
+}
+.btn {
+    border-radius: 50px; /* Botões arredondados são mais amigáveis */
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: 3px solid rgba(255,255,255,0.3);
+}
+.categoria {
+    border-radius: 20px; /* Cards mais curvos */
+    border: 4px solid white;
 }
 
 body {

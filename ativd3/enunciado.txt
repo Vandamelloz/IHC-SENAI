@@ -1,0 +1,15 @@
+Analisando o site, o aluno deve apresentar esses questionamentos:
+1) O que chama mais atenção nos primeiros 5 segundos?
+2) A navegação é intuitiva? Justifique.
+3) Existe excesso de informação?
+4) Como está a hierarquia visual?
+5) O site funciona bem no celular?
+6) Liste no mínimo 5 melhorias possíveis.
+7) O design ajuda ou atrapalha o usuário? Explique.
+
+Parte Final – Mini Redesign:
+Após a análise, cada aluno deverá rascunhar uma versão melhorada da página inicial do site
+analisado. Deve explicar:
+- O que foi removido;
+- O que foi reorganizado;
+- Por que a nova versão melhora a experiência do usuário.
